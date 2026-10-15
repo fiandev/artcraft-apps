@@ -1,4 +1,39 @@
 {
-  "version": 1,
-  "apps": {}
+  "apps": {
+    "wordcraft": {
+      "last_tag": "v0.7.0",
+      "releases": {
+        "v0.7.0": {
+          "wordcraft-0.7.0-linux-aarch64.rpm": {
+            "build_id": 11125561,
+            "chroots": [
+              "fedora-43-aarch64",
+              "fedora-44-aarch64",
+              "fedora-rawhide-aarch64"
+            ],
+            "published_at": "2026-10-15T05:14:59+00:00"
+          },
+          "wordcraft-0.7.0-linux-riscv64.rpm": {
+            "build_id": 11125562,
+            "chroots": [
+              "fedora-43-riscv64",
+              "fedora-44-riscv64",
+              "fedora-rawhide-riscv64"
+            ],
+            "published_at": "2026-10-15T05:15:07+00:00"
+          },
+          "wordcraft-0.7.0-linux-x86_64.rpm": {
+            "build_id": 11125563,
+            "chroots": [
+              "fedora-43-x86_64",
+              "fedora-44-x86_64",
+              "fedora-rawhide-x86_64"
+            ],
+            "published_at": "2026-10-15T05:15:16+00:00"
+          }
+        }
+      }
+    }
+  },
+  "version": 1
 }
