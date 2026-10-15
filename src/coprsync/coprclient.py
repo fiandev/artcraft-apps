@@ -14,6 +14,7 @@ import urllib.request
 from pathlib import Path
 from typing import Any, Callable
 
+import yaml
 from copr.v3 import Client
 from copr.v3.exceptions import CoprException, CoprNoResultException
 
@@ -147,21 +148,68 @@ def _load_client(copr_url: str) -> Client:
     path = Path(os.environ.get("COPR_CONFIG_FILE", DEFAULT_COPR_CONFIG))
     if not path.exists():
         raise CoprError(
-            f"no Copr credentials at {path}; export COPR_CONFIG or write your "
-            "~/.config/copr (see README)"
+            f"no Copr credentials at {path}; set the COPR_CONFIG secret (see README)"
         )
-    parser = configparser.RawConfigParser()  # tokens contain '%'
-    parser.read(path)
-    if not parser.has_section("copr-cli"):
-        raise CoprError(f"{path} has no [copr-cli] section")
+    creds = read_credentials(path)
+    declared_url = creds.get("copr_url")
+    if declared_url and declared_url.rstrip("/") != copr_url:
+        log.warning(
+            "  %s declares copr_url=%s but config/apps.yaml says %s; using the config",
+            path, declared_url, copr_url,
+        )
+    return Client(
+        {
+            "username": creds["username"],
+            "login": creds["login"],
+            "token": creds["token"],
+            "copr_url": copr_url,
+        }
+    )
+
+
+def read_credentials(path: Path) -> dict[str, str]:
+    """Read a Copr credential file as either the INI `~/.config/copr` or YAML.
+
+    The API page prints an INI block to paste into ~/.config/copr, but pasting
+    the same fields as YAML is a natural mistake, so both are accepted.
+    """
+    text = path.read_text()
+    creds = _parse_ini(text) or _parse_yaml(text)
+    if creds is None:
+        raise CoprError(
+            f"{path} is neither the INI block from copr's /api/ page nor the same "
+            "fields as YAML"
+        )
+    missing = [key for key in ("username", "login", "token") if not creds.get(key)]
+    if missing:
+        raise CoprError(f"{path} is missing: {', '.join(missing)}")
+    return creds
+
+
+def _parse_ini(text: str) -> dict[str, str] | None:
+    parser = configparser.RawConfigParser()
     try:
-        return Client(
-            {
-                "username": parser.get("copr-cli", "username"),
-                "login": parser.get("copr-cli", "login"),
-                "token": parser.get("copr-cli", "token"),
-                "copr_url": copr_url,
-            }
-        )
-    except (configparser.NoOptionError, KeyError) as exc:
-        raise CoprError(f"{path} is missing a required key: {exc}") from exc
+        parser.read_string(text)
+    except configparser.Error:
+        return None
+    for section in parser.sections():
+        if section.strip().lower() in ("copr-cli", "copr"):
+            return {key.lower(): value for key, value in parser.items(section)}
+    return None
+
+
+def _parse_yaml(text: str) -> dict[str, str] | None:
+    try:
+        data = yaml.safe_load(text)
+    except yaml.YAMLError:
+        return None
+    if not isinstance(data, dict):
+        return None
+    block = data.get("copr-cli") or data.get("copr_cli") or data
+    if not isinstance(block, dict):
+        return None
+    return {
+        str(key).lower(): str(value).strip()
+        for key, value in block.items()
+        if isinstance(value, (str, int))
+    }

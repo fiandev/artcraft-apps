@@ -45,17 +45,36 @@ no configured chroots are skipped and counted.
    yet — `/coprs/fiandev/` answers *"User fiandev does not exist"*. Register the
    namespace, or change `owner` in `config/apps.yaml`.
 
-2. **API token.** Get it from <https://copr.fedorainfracloud.org/api/>. Tokens
-   expire after 180 days. Store the whole file content as the repository secret
-   `COPR_CONFIG`:
+2. **API token.** Get it from <https://copr.fedorainfracloud.org/api/> and store
+   it as the repository secret `COPR_CONFIG`:
+
+   ```sh
+   gh secret set COPR_CONFIG --repo <owner>/artcraft-apps < ~/.config/copr
+   ```
+
+   The secret is the block the API page tells you to paste into `~/.config/copr`
+   (INI), and the same fields as YAML are also accepted, nested or flat:
 
    ```ini
    [copr-cli]
-   login = <hash>
+   login = <login hash>
    username = <username>
    token = <token>
    copr_url = https://copr.fedorainfracloud.org
    ```
+
+   ```yaml
+   copr-cli:
+     login: <login hash>
+     username: <username>
+     token: <token>
+     copr_url: https://copr.fedorainfracloud.org
+   ```
+
+   `username` must match `owner` in `config/apps.yaml`, or Copr rejects the
+   builds. The instance URL comes from `config/apps.yaml`; if `copr_url` in the
+   secret disagrees, the run logs a warning and uses the config. Tokens expire
+   after 180 days, after which authentication fails with a clear error.
 
 3. **Let Actions write.** `Settings → Actions → General → Workflow permissions`
    must allow read **and write**, because the job commits `state/` back to
