@@ -41,9 +41,9 @@ no configured chroots are skipped and counted.
 
 ## Setup
 
-1. **Copr account.** `fiandev` does not exist on `copr.fedorainfracloud.org`
-   yet — `/coprs/fiandev/` answers *"User fiandev does not exist"*. Register the
-   namespace, or change `owner` in `config/apps.yaml`.
+1. **Copr account.** `owner` in `config/apps.yaml` is the Fedora account name,
+   not the GitHub one — it is currently `alfiansa`. Two projects already exist
+   there (`snapmit`, `postman`) and neither collides with the names this creates.
 
 2. **API token.** Get it from <https://copr.fedorainfracloud.org/api/> and store
    it as the repository secret `COPR_CONFIG`:

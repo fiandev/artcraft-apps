@@ -1,6 +1,7 @@
 # Copr namespace. Every app lands in <owner>/<project>.
-# NOTE: on copr.fedorainfracloud.org the account "fiandev" does not exist yet.
-owner: fiandev
+# This is the Fedora account name (FAS), which is what Copr keys projects on: the
+# GitHub account is fiandev, but the Copr account is alfiansa.
+owner: alfiansa
 
 # Copr instance to publish into. Point this at a self-hosted instance to use the
 # direct-binary `uploadrpm` strategy; the public instance refuses it.
