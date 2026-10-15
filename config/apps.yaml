@@ -18,13 +18,16 @@ include_prereleases: false
 # with "-<arch>"; the loader rejects mismatches.
 chroots:
   x86_64:
-    - fedora-45-x86_64
+    - fedora-43-x86_64
+    - fedora-44-x86_64
     - fedora-rawhide-x86_64
   aarch64:
-    - fedora-45-aarch64
+    - fedora-43-aarch64
+    - fedora-44-aarch64
     - fedora-rawhide-aarch64
   riscv64:
-    - fedora-45-riscv64
+    - fedora-43-riscv64
+    - fedora-44-riscv64
     - fedora-rawhide-riscv64
 
 # Curated allowlist of storytold repos to mirror. Short form is the repo name and
