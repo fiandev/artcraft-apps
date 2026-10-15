@@ -1,0 +1,97 @@
+name: Sync Copr
+
+on:
+  schedule:
+    # Hourly, offset so it does not collide with other on-the-hour jobs.
+    - cron: "17 * * * *"
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: Detect new releases and report, without touching Copr
+        type: boolean
+        default: false
+      strategy:
+        description: How to publish
+        type: choice
+        options: [auto, uploadrpm, srpm]
+        default: auto
+      apps:
+        description: Comma-separated subset of the allowlist (empty = all)
+        type: string
+        default: ""
+      initial:
+        description: First run with no state
+        type: choice
+        options: [latest, all]
+        default: latest
+
+concurrency:
+  group: sync-copr
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install rpm tooling
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends rpm cpio
+          rpmbuild --version
+
+      - name: Install coprsync
+        run: pip install .
+
+      - name: Write Copr credentials
+        env:
+          COPR_CONFIG: ${{ secrets.COPR_CONFIG }}
+        run: |
+          if [ -z "$COPR_CONFIG" ]; then
+            echo "::error::repository secret COPR_CONFIG is not set; see README"
+            exit 1
+          fi
+          install -d -m 700 ~/.config
+          printf '%s\n' "$COPR_CONFIG" > ~/.config/copr
+          chmod 600 ~/.config/copr
+
+      - name: Sync
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APPS: ${{ inputs.apps }}
+          STRATEGY: ${{ inputs.strategy || 'auto' }}
+          INITIAL: ${{ inputs.initial || 'latest' }}
+          DRY_RUN: ${{ inputs.dry_run }}
+        run: |
+          args=(sync --strategy "$STRATEGY" --initial "$INITIAL")
+          if [ -n "$APPS" ]; then
+            args+=(--only "$APPS")
+          fi
+          if [ "$DRY_RUN" = "true" ]; then
+            args+=(--dry-run)
+          fi
+          coprsync "${args[@]}"
+
+      - name: Commit state
+        # Runs even after a partial failure: state records progress asset by asset.
+        if: ${{ always() && inputs.dry_run != true }}
+        run: |
+          git config user.name "copr-sync"
+          git config user.email "copr-sync@users.noreply.github.com"
+          git add state/
+          if git diff --cached --quiet; then
+            echo "state unchanged"
+            exit 0
+          fi
+          git commit -m "chore(state): record published releases"
+          git push

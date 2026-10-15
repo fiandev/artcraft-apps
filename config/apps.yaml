@@ -1,0 +1,48 @@
+# Copr namespace. Every app lands in <owner>/<project>.
+# NOTE: on copr.fedorainfracloud.org the account "fiandev" does not exist yet.
+owner: fiandev
+
+# Copr instance to publish into. Point this at a self-hosted instance to use the
+# direct-binary `uploadrpm` strategy; the public instance refuses it.
+copr_url: https://copr.fedorainfracloud.org
+
+# Upstream GitHub org to watch for releases.
+github_org: storytold
+
+# Include GitHub prereleases. Off: only stable releases are mirrored.
+include_prereleases: false
+
+# Copr chroots per upstream asset architecture. Every architecture found in a
+# release is published to the chroots listed under it. A chroot name must end
+# with "-<arch>"; the loader rejects mismatches.
+chroots:
+  x86_64:
+    - fedora-45-x86_64
+    - fedora-rawhide-x86_64
+  aarch64:
+    - fedora-45-aarch64
+    - fedora-rawhide-aarch64
+  riscv64:
+    - fedora-45-riscv64
+    - fedora-rawhide-riscv64
+
+# Curated allowlist of storytold repos to mirror. Short form is the repo name and
+# the Copr project defaults to it. Long form allows overriding the project.
+#
+#   - photocraft
+#   - {repo: craft-launcher, project: craft-launcher, enabled: true}
+apps:
+  - photocraft
+  - pdfcraft
+  - filmcraft
+  - vectorcraft
+  - lightcraft
+  - designcraft
+  - effectcraft
+  - gridcraft
+  - cadcraft
+  - deckcraft
+  - soundcraft
+  - wordcraft
+  - figcraft
+  - craft-launcher
