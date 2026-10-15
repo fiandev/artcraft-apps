@@ -1,11 +1,23 @@
 # artcraft-apps
 
-Keeps Copr projects in sync with the `.rpm` assets published in
-[storytold](https://github.com/storytold) GitHub releases.
+**A personal mirror, not a distribution.** This repo exists so updates to
+ArtCraft's apps land in my own Copr namespace and a plain `dnf upgrade` picks
+them up. The packages are not mine — I did not write them, I do not support
+them, and bugs belong upstream. See [Credit](#credit) and
+[Disclaimer](#disclaimer).
 
-An hourly GitHub Actions job scans an allowlist of upstream repos, finds
-releases it has not published yet, and pushes their Linux packages into Copr
-projects named `<owner>/<repo>`.
+Point `dnf` at one project and you are done:
+
+```sh
+sudo dnf copr enable alfiansa/photocraft
+sudo dnf install photocraft
+```
+
+From then on this repo keeps it current on its own. Every hour a GitHub Actions
+job lists the releases of
+[github.com/storytold](https://github.com/storytold), and when the original repo
+publishes a new one it pulls the `.rpm` assets from that latest release and
+pushes them into the Copr project of the same name, `alfiansa/<repo>`.
 
 ## Why it repackages instead of just uploading
 
@@ -28,6 +40,24 @@ Copr, so it is not bit-identical to the upstream file.
 `DIRECT_RPM_UPLOAD = True`. `--strategy auto` (the default) probes the
 instance's API and picks whichever it offers.
 
+## How updates work
+
+Upstream ships by tagging a release and attaching prebuilt Linux packages. You
+do not have to watch for it:
+
+1. Hourly, the job lists the releases of every repo in `config/apps.yaml`.
+2. Releases already mirrored are skipped — that is what `state/state.json` is for.
+3. For a release it has not seen, it downloads each `.rpm` asset straight from
+   the GitHub release and submits it to Copr, one build per configured chroot.
+4. Copr builds it, signs it, and refreshes the repository metadata.
+
+Within the hour, `sudo dnf upgrade` offers the new version. Nothing runs on your
+machine and there is no daemon or timer to maintain — the release you get is
+upstream's, re-published.
+
+If upstream goes quiet, nothing happens and nothing breaks. The last mirrored
+release just stays installed.
+
 ## What gets watched
 
 `config/apps.yaml` holds the allowlist. Today that is the 14 upstream repos
@@ -38,6 +68,34 @@ figcraft and craft-launcher.
 Each release is published per architecture (`x86_64`, `aarch64`, `riscv64`) to
 the chroots listed for that architecture. Assets with an architecture that has
 no configured chroots are skipped and counted.
+
+## Credit
+
+**All credit for these applications belongs to the ArtCraft team at
+[storytold](https://github.com/storytold).** They design, build, package and
+release every one of them. Nothing here is my work; I only re-publish their own
+release binaries so that `dnf` can keep them up to date.
+
+Most of these repos are staffed by the same handful of people, and issues,
+pull requests and donations — whatever the upstream project asks for — should go
+to them:
+
+- Org: <https://github.com/storytold>
+- Website: <https://getartcraft.com>
+- YouTube: [@OfficialArtCraftStudios](https://www.youtube.com/@OfficialArtCraftStudios)
+- X: [@get_artcraft](https://x.com/get_artcraft)
+
+ArtCraft, PhotoCraft, FilmCraft and the rest are their names and marks. The code
+is theirs under their licences (MIT / Apache-2.0); the licence files ship inside
+each package under `/usr/share/doc/<package>/`.
+
+## Disclaimer
+
+This Copr namespace is an unofficial, unaffiliated personal mirror. It is not
+endorsed by, supported by, or connected to the ArtCraft team in any way.
+
+**Report problems upstream, not here.** A crash, a missing dependency or a bad
+build has to be fixed in their repo — I can only mirror what they release.
 
 ## Setup
 
