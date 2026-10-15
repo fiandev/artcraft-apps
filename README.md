@@ -1,4 +1,4 @@
-# artcraft-apps
+# Artcraft Apps
 
 **A personal mirror, not a distribution.** This repo exists so updates to
 ArtCraft's apps land in my own Copr namespace and a plain `dnf upgrade` picks
@@ -109,20 +109,20 @@ GH_TOKEN=$(gh auth token) .venv/bin/coprsync sync --only photocraft
 `rpmbuild` and `rpm2cpio` on `PATH` (Fedora: `rpm-build`; Debian/Ubuntu:
 `rpm` + `cpio`).
 
-| Flag | Meaning |
-| --- | --- |
-| `--strategy auto\|uploadrpm\|srpm` | How to publish; `auto` probes the instance |
-| `--only a,b` | Subset of the allowlist, rejected if not listed |
-| `--initial latest\|all` | First run with no state: newest release, or backfill everything fetched |
-| `--dry-run` | Report only |
-| `--fail-fast` | Stop at the first failure |
+| Flag                               | Meaning                                                                 |
+| ---------------------------------- | ----------------------------------------------------------------------- |
+| `--strategy auto\|uploadrpm\|srpm` | How to publish; `auto` probes the instance                              |
+| `--only a,b`                       | Subset of the allowlist, rejected if not listed                         |
+| `--initial latest\|all`            | First run with no state: newest release, or backfill everything fetched |
+| `--dry-run`                        | Report only                                                             |
+| `--fail-fast`                      | Stop at the first failure                                               |
 
 ## State
 
 `state/state.json` records, per repo, the newest release the scan stops at and
 which assets of it reached Copr. It is committed by the workflow.
 
-The boundary tag stays *inside* the scan window, so a release that failed
+The boundary tag stays _inside_ the scan window, so a release that failed
 halfway is retried on the next run without re-publishing the assets that
 already succeeded. Records for older tags are dropped once the boundary moves
 past them.
