@@ -68,10 +68,12 @@ jobs:
       - name: Sync
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APPS: ${{ inputs.apps }}
-          STRATEGY: ${{ inputs.strategy || 'auto' }}
-          INITIAL: ${{ inputs.initial || 'latest' }}
-          DRY_RUN: ${{ inputs.dry_run }}
+          # github.event.inputs, not inputs: this workflow also runs on schedule,
+          # where only the event payload exists. Values are always strings.
+          APPS: ${{ github.event.inputs.apps }}
+          STRATEGY: ${{ github.event.inputs.strategy || 'auto' }}
+          INITIAL: ${{ github.event.inputs.initial || 'latest' }}
+          DRY_RUN: ${{ github.event.inputs.dry_run }}
         run: |
           args=(sync --strategy "$STRATEGY" --initial "$INITIAL")
           if [ -n "$APPS" ]; then
@@ -84,7 +86,7 @@ jobs:
 
       - name: Commit state
         # Runs even after a partial failure: state records progress asset by asset.
-        if: ${{ always() && inputs.dry_run != true }}
+        if: ${{ always() && github.event.inputs.dry_run != 'true' }}
         run: |
           git config user.name "copr-sync"
           git config user.email "copr-sync@users.noreply.github.com"
