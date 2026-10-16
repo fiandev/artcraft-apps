@@ -391,26 +391,35 @@
       }
     },
     "vectorcraft": {
-      "last_tag": "v0.11.0",
+      "last_tag": "v0.12.0",
       "releases": {
-        "v0.11.0": {
-          "vectorcraft-0.11.0-linux-aarch64.rpm": {
-            "build_id": 11128317,
+        "v0.12.0": {
+          "vectorcraft-0.12.0-linux-aarch64.rpm": {
+            "build_id": 11159812,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:03:37+00:00"
+            "published_at": "2026-10-16T13:20:06+00:00"
           },
-          "vectorcraft-0.11.0-linux-x86_64.rpm": {
-            "build_id": 11128318,
+          "vectorcraft-0.12.0-linux-riscv64.rpm": {
+            "build_id": 11159813,
+            "chroots": [
+              "fedora-43-riscv64",
+              "fedora-44-riscv64",
+              "fedora-rawhide-riscv64"
+            ],
+            "published_at": "2026-10-16T13:20:13+00:00"
+          },
+          "vectorcraft-0.12.0-linux-x86_64.rpm": {
+            "build_id": 11159814,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:03:45+00:00"
+            "published_at": "2026-10-16T13:20:21+00:00"
           }
         }
       }
