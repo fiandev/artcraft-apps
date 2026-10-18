@@ -69,69 +69,69 @@
       }
     },
     "deckcraft": {
-      "last_tag": "v0.7.0",
+      "last_tag": "v0.8.0",
       "releases": {
-        "v0.7.0": {
-          "deckcraft-0.7.0-linux-aarch64.rpm": {
-            "build_id": 11128335,
+        "v0.8.0": {
+          "deckcraft-0.8.0-linux-aarch64.rpm": {
+            "build_id": 11166075,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:05:12+00:00"
+            "published_at": "2026-10-18T06:03:02+00:00"
           },
-          "deckcraft-0.7.0-linux-riscv64.rpm": {
-            "build_id": 11128336,
+          "deckcraft-0.8.0-linux-riscv64.rpm": {
+            "build_id": 11166077,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-15T10:05:20+00:00"
+            "published_at": "2026-10-18T06:03:06+00:00"
           },
-          "deckcraft-0.7.0-linux-x86_64.rpm": {
-            "build_id": 11128337,
+          "deckcraft-0.8.0-linux-x86_64.rpm": {
+            "build_id": 11166078,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:05:26+00:00"
+            "published_at": "2026-10-18T06:03:09+00:00"
           }
         }
       }
     },
     "designcraft": {
-      "last_tag": "v0.8.0",
+      "last_tag": "v0.9.0",
       "releases": {
-        "v0.8.0": {
-          "designcraft-0.8.0-linux-aarch64.rpm": {
-            "build_id": 11128321,
+        "v0.9.0": {
+          "designcraft-0.9.0-linux-aarch64.rpm": {
+            "build_id": 11166068,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:04:08+00:00"
+            "published_at": "2026-10-18T06:02:44+00:00"
           },
-          "designcraft-0.8.0-linux-riscv64.rpm": {
-            "build_id": 11128322,
+          "designcraft-0.9.0-linux-riscv64.rpm": {
+            "build_id": 11166069,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-15T10:04:14+00:00"
+            "published_at": "2026-10-18T06:02:48+00:00"
           },
-          "designcraft-0.8.0-linux-x86_64.rpm": {
-            "build_id": 11128323,
+          "designcraft-0.9.0-linux-x86_64.rpm": {
+            "build_id": 11166071,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:04:19+00:00"
+            "published_at": "2026-10-18T06:02:52+00:00"
           }
         }
       }
@@ -196,162 +196,171 @@
       }
     },
     "filmcraft": {
-      "last_tag": "v0.8.0",
+      "last_tag": "v0.9.0",
       "releases": {
-        "v0.8.0": {
-          "filmcraft-0.8.0-linux-aarch64.rpm": {
-            "build_id": 11128313,
+        "v0.9.0": {
+          "filmcraft-0.9.0-linux-aarch64.rpm": {
+            "build_id": 11166054,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:03:17+00:00"
+            "published_at": "2026-10-18T06:02:00+00:00"
           },
-          "filmcraft-0.8.0-linux-riscv64.rpm": {
-            "build_id": 11128314,
+          "filmcraft-0.9.0-linux-riscv64.rpm": {
+            "build_id": 11166055,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-15T10:03:22+00:00"
+            "published_at": "2026-10-18T06:02:03+00:00"
           },
-          "filmcraft-0.8.0-linux-x86_64.rpm": {
-            "build_id": 11128315,
+          "filmcraft-0.9.0-linux-x86_64.rpm": {
+            "build_id": 11166056,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:03:28+00:00"
+            "published_at": "2026-10-18T06:02:06+00:00"
           }
         }
       }
     },
     "gridcraft": {
-      "last_tag": "v0.7.0",
+      "last_tag": "v0.8.0",
       "releases": {
-        "v0.7.0": {
-          "gridcraft-0.7.0-linux-aarch64.rpm": {
-            "build_id": 11128328,
+        "v0.8.0": {
+          "gridcraft-0.8.0-linux-aarch64.rpm": {
+            "build_id": 11166072,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:04:42+00:00"
+            "published_at": "2026-10-18T06:02:54+00:00"
           },
-          "gridcraft-0.7.0-linux-riscv64.rpm": {
-            "build_id": 11128329,
+          "gridcraft-0.8.0-linux-riscv64.rpm": {
+            "build_id": 11166073,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-15T10:04:44+00:00"
+            "published_at": "2026-10-18T06:02:56+00:00"
           },
-          "gridcraft-0.7.0-linux-x86_64.rpm": {
-            "build_id": 11128330,
+          "gridcraft-0.8.0-linux-x86_64.rpm": {
+            "build_id": 11166074,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:04:46+00:00"
+            "published_at": "2026-10-18T06:02:57+00:00"
           }
         }
       }
     },
     "lightcraft": {
-      "last_tag": "v0.8.0",
+      "last_tag": "v0.9.1",
       "releases": {
-        "v0.8.0": {
-          "lightcraft-0.8.0-linux-aarch64.rpm": {
-            "build_id": 11128319,
+        "v0.9.1": {
+          "lightcraft-0.9.1-linux-aarch64.rpm": {
+            "build_id": 11166060,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:03:53+00:00"
+            "published_at": "2026-10-18T06:02:29+00:00"
           },
-          "lightcraft-0.8.0-linux-x86_64.rpm": {
-            "build_id": 11128320,
+          "lightcraft-0.9.1-linux-riscv64.rpm": {
+            "build_id": 11166061,
+            "chroots": [
+              "fedora-43-riscv64",
+              "fedora-44-riscv64",
+              "fedora-rawhide-riscv64"
+            ],
+            "published_at": "2026-10-18T06:02:35+00:00"
+          },
+          "lightcraft-0.9.1-linux-x86_64.rpm": {
+            "build_id": 11166063,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:04:01+00:00"
+            "published_at": "2026-10-18T06:02:39+00:00"
           }
         }
       }
     },
     "pdfcraft": {
-      "last_tag": "v0.8.0",
+      "last_tag": "v0.9.0",
       "releases": {
-        "v0.8.0": {
-          "pdfcraft-0.8.0-linux-aarch64.rpm": {
-            "build_id": 11128310,
+        "v0.9.0": {
+          "pdfcraft-0.9.0-linux-aarch64.rpm": {
+            "build_id": 11166051,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:02:57+00:00"
+            "published_at": "2026-10-18T06:01:49+00:00"
           },
-          "pdfcraft-0.8.0-linux-riscv64.rpm": {
-            "build_id": 11128311,
+          "pdfcraft-0.9.0-linux-riscv64.rpm": {
+            "build_id": 11166052,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-15T10:03:04+00:00"
+            "published_at": "2026-10-18T06:01:53+00:00"
           },
-          "pdfcraft-0.8.0-linux-x86_64.rpm": {
-            "build_id": 11128312,
+          "pdfcraft-0.9.0-linux-x86_64.rpm": {
+            "build_id": 11166053,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:03:10+00:00"
+            "published_at": "2026-10-18T06:01:57+00:00"
           }
         }
       }
     },
     "photocraft": {
-      "last_tag": "v0.9.0",
+      "last_tag": "v0.10.0",
       "releases": {
-        "v0.9.0": {
-          "photocraft-0.9.0-linux-aarch64.rpm": {
-            "build_id": 11128306,
+        "v0.10.0": {
+          "photocraft-0.10.0-linux-aarch64.rpm": {
+            "build_id": 11166048,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:02:33+00:00"
+            "published_at": "2026-10-18T06:01:37+00:00"
           },
-          "photocraft-0.9.0-linux-riscv64.rpm": {
-            "build_id": 11128308,
+          "photocraft-0.10.0-linux-riscv64.rpm": {
+            "build_id": 11166049,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-15T10:02:40+00:00"
+            "published_at": "2026-10-18T06:01:41+00:00"
           },
-          "photocraft-0.9.0-linux-x86_64.rpm": {
-            "build_id": 11128309,
+          "photocraft-0.10.0-linux-x86_64.rpm": {
+            "build_id": 11166050,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:02:45+00:00"
+            "published_at": "2026-10-18T06:01:45+00:00"
           }
         }
       }
@@ -391,35 +400,35 @@
       }
     },
     "vectorcraft": {
-      "last_tag": "v0.12.0",
+      "last_tag": "v0.13.1",
       "releases": {
-        "v0.12.0": {
-          "vectorcraft-0.12.0-linux-aarch64.rpm": {
-            "build_id": 11159812,
+        "v0.13.1": {
+          "vectorcraft-0.13.1-linux-aarch64.rpm": {
+            "build_id": 11166057,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-16T13:20:06+00:00"
+            "published_at": "2026-10-18T06:02:13+00:00"
           },
-          "vectorcraft-0.12.0-linux-riscv64.rpm": {
-            "build_id": 11159813,
+          "vectorcraft-0.13.1-linux-riscv64.rpm": {
+            "build_id": 11166058,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-16T13:20:13+00:00"
+            "published_at": "2026-10-18T06:02:18+00:00"
           },
-          "vectorcraft-0.12.0-linux-x86_64.rpm": {
-            "build_id": 11159814,
+          "vectorcraft-0.13.1-linux-x86_64.rpm": {
+            "build_id": 11166059,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-16T13:20:21+00:00"
+            "published_at": "2026-10-18T06:02:23+00:00"
           }
         }
       }
