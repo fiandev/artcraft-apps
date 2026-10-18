@@ -1,35 +1,35 @@
 {
   "apps": {
     "cadcraft": {
-      "last_tag": "v0.7.0",
+      "last_tag": "v0.8.0",
       "releases": {
-        "v0.7.0": {
-          "cadcraft-0.7.0-linux-aarch64.rpm": {
-            "build_id": 11128331,
+        "v0.8.0": {
+          "cadcraft-0.8.0-linux-aarch64.rpm": {
+            "build_id": 11165324,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:04:54+00:00"
+            "published_at": "2026-10-18T01:11:03+00:00"
           },
-          "cadcraft-0.7.0-linux-riscv64.rpm": {
-            "build_id": 11128332,
+          "cadcraft-0.8.0-linux-riscv64.rpm": {
+            "build_id": 11165325,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-15T10:04:58+00:00"
+            "published_at": "2026-10-18T01:11:09+00:00"
           },
-          "cadcraft-0.7.0-linux-x86_64.rpm": {
-            "build_id": 11128333,
+          "cadcraft-0.8.0-linux-x86_64.rpm": {
+            "build_id": 11165327,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:05:04+00:00"
+            "published_at": "2026-10-18T01:11:15+00:00"
           }
         }
       }
@@ -137,35 +137,35 @@
       }
     },
     "effectcraft": {
-      "last_tag": "v0.10.0",
+      "last_tag": "v0.11.1",
       "releases": {
-        "v0.10.0": {
-          "effectcraft-0.10.0-linux-aarch64.rpm": {
-            "build_id": 11128324,
+        "v0.11.1": {
+          "effectcraft-0.11.1-linux-aarch64.rpm": {
+            "build_id": 11165320,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:04:27+00:00"
+            "published_at": "2026-10-18T01:10:42+00:00"
           },
-          "effectcraft-0.10.0-linux-riscv64.rpm": {
-            "build_id": 11128325,
+          "effectcraft-0.11.1-linux-riscv64.rpm": {
+            "build_id": 11165321,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-15T10:04:33+00:00"
+            "published_at": "2026-10-18T01:10:50+00:00"
           },
-          "effectcraft-0.10.0-linux-x86_64.rpm": {
-            "build_id": 11128326,
+          "effectcraft-0.11.1-linux-x86_64.rpm": {
+            "build_id": 11165323,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:04:38+00:00"
+            "published_at": "2026-10-18T01:10:55+00:00"
           }
         }
       }
@@ -357,35 +357,35 @@
       }
     },
     "soundcraft": {
-      "last_tag": "v0.7.0",
+      "last_tag": "v0.8.0",
       "releases": {
-        "v0.7.0": {
-          "soundcraft-0.7.0-linux-aarch64.rpm": {
-            "build_id": 11128338,
+        "v0.8.0": {
+          "soundcraft-0.8.0-linux-aarch64.rpm": {
+            "build_id": 11165328,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-15T10:05:30+00:00"
+            "published_at": "2026-10-18T01:11:19+00:00"
           },
-          "soundcraft-0.7.0-linux-riscv64.rpm": {
-            "build_id": 11128339,
+          "soundcraft-0.8.0-linux-riscv64.rpm": {
+            "build_id": 11165329,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-15T10:05:32+00:00"
+            "published_at": "2026-10-18T01:11:22+00:00"
           },
-          "soundcraft-0.7.0-linux-x86_64.rpm": {
-            "build_id": 11128340,
+          "soundcraft-0.8.0-linux-x86_64.rpm": {
+            "build_id": 11165330,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-15T10:05:35+00:00"
+            "published_at": "2026-10-18T01:11:24+00:00"
           }
         }
       }
