@@ -137,35 +137,35 @@
       }
     },
     "effectcraft": {
-      "last_tag": "v0.13.0",
+      "last_tag": "v0.14.0",
       "releases": {
-        "v0.13.0": {
-          "effectcraft-0.13.0-linux-aarch64.rpm": {
-            "build_id": 11181473,
+        "v0.14.0": {
+          "effectcraft-0.14.0-linux-aarch64.rpm": {
+            "build_id": 11185106,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-21T07:49:14+00:00"
+            "published_at": "2026-10-21T22:27:30+00:00"
           },
-          "effectcraft-0.13.0-linux-riscv64.rpm": {
-            "build_id": 11181475,
+          "effectcraft-0.14.0-linux-riscv64.rpm": {
+            "build_id": 11185107,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-21T07:49:22+00:00"
+            "published_at": "2026-10-21T22:27:36+00:00"
           },
-          "effectcraft-0.13.0-linux-x86_64.rpm": {
-            "build_id": 11181477,
+          "effectcraft-0.14.0-linux-x86_64.rpm": {
+            "build_id": 11185108,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-21T07:49:26+00:00"
+            "published_at": "2026-10-21T22:27:41+00:00"
           }
         }
       }
@@ -307,35 +307,35 @@
       }
     },
     "pdfcraft": {
-      "last_tag": "v0.10.1",
+      "last_tag": "v0.11.0",
       "releases": {
-        "v0.10.1": {
-          "pdfcraft-0.10.1-linux-aarch64.rpm": {
-            "build_id": 11181457,
+        "v0.11.0": {
+          "pdfcraft-0.11.0-linux-aarch64.rpm": {
+            "build_id": 11185103,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-21T07:47:35+00:00"
+            "published_at": "2026-10-21T22:27:03+00:00"
           },
-          "pdfcraft-0.10.1-linux-riscv64.rpm": {
-            "build_id": 11181458,
+          "pdfcraft-0.11.0-linux-riscv64.rpm": {
+            "build_id": 11185104,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-21T07:47:43+00:00"
+            "published_at": "2026-10-21T22:27:12+00:00"
           },
-          "pdfcraft-0.10.1-linux-x86_64.rpm": {
-            "build_id": 11181459,
+          "pdfcraft-0.11.0-linux-x86_64.rpm": {
+            "build_id": 11185105,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-21T07:47:51+00:00"
+            "published_at": "2026-10-21T22:27:19+00:00"
           }
         }
       }
