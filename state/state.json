@@ -35,35 +35,35 @@
       }
     },
     "craft-launcher": {
-      "last_tag": "v0.6.0",
+      "last_tag": "v0.6.1",
       "releases": {
-        "v0.6.0": {
-          "artcraft-launcher-0.6.0-linux-aarch64.rpm": {
-            "build_id": 11179532,
+        "v0.6.1": {
+          "artcraft-launcher-0.6.1-linux-aarch64.rpm": {
+            "build_id": 11183172,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-20T18:33:21+00:00"
+            "published_at": "2026-10-21T13:55:28+00:00"
           },
-          "artcraft-launcher-0.6.0-linux-riscv64.rpm": {
-            "build_id": 11179533,
+          "artcraft-launcher-0.6.1-linux-riscv64.rpm": {
+            "build_id": 11183173,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-20T18:33:24+00:00"
+            "published_at": "2026-10-21T13:55:30+00:00"
           },
-          "artcraft-launcher-0.6.0-linux-x86_64.rpm": {
-            "build_id": 11179534,
+          "artcraft-launcher-0.6.1-linux-x86_64.rpm": {
+            "build_id": 11183174,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-20T18:33:26+00:00"
+            "published_at": "2026-10-21T13:55:33+00:00"
           }
         }
       }
