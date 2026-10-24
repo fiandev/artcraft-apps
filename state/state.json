@@ -341,35 +341,35 @@
       }
     },
     "photocraft": {
-      "last_tag": "v0.14.0",
+      "last_tag": "v0.15.1",
       "releases": {
-        "v0.14.0": {
-          "photocraft-0.14.0-linux-aarch64.rpm": {
-            "build_id": 11195292,
+        "v0.15.1": {
+          "photocraft-0.15.1-linux-aarch64.rpm": {
+            "build_id": 11200121,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-10-23T01:37:14+00:00"
+            "published_at": "2026-10-24T01:40:42+00:00"
           },
-          "photocraft-0.14.0-linux-riscv64.rpm": {
-            "build_id": 11195293,
+          "photocraft-0.15.1-linux-riscv64.rpm": {
+            "build_id": 11200122,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-10-23T01:37:18+00:00"
+            "published_at": "2026-10-24T01:40:48+00:00"
           },
-          "photocraft-0.14.0-linux-x86_64.rpm": {
-            "build_id": 11195295,
+          "photocraft-0.15.1-linux-x86_64.rpm": {
+            "build_id": 11200123,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-10-23T01:37:22+00:00"
+            "published_at": "2026-10-24T01:40:54+00:00"
           }
         }
       }
