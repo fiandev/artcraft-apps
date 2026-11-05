@@ -103,35 +103,35 @@
       }
     },
     "designcraft": {
-      "last_tag": "v0.17.0",
+      "last_tag": "v0.17.1",
       "releases": {
-        "v0.17.0": {
-          "designcraft-0.17.0-linux-aarch64.rpm": {
-            "build_id": 11248235,
+        "v0.17.1": {
+          "designcraft-0.17.1-linux-aarch64.rpm": {
+            "build_id": 11261533,
             "chroots": [
               "fedora-43-aarch64",
               "fedora-44-aarch64",
               "fedora-rawhide-aarch64"
             ],
-            "published_at": "2026-11-03T07:00:00+00:00"
+            "published_at": "2026-11-05T00:25:50+00:00"
           },
-          "designcraft-0.17.0-linux-riscv64.rpm": {
-            "build_id": 11248237,
+          "designcraft-0.17.1-linux-riscv64.rpm": {
+            "build_id": 11261534,
             "chroots": [
               "fedora-43-riscv64",
               "fedora-44-riscv64",
               "fedora-rawhide-riscv64"
             ],
-            "published_at": "2026-11-03T07:00:07+00:00"
+            "published_at": "2026-11-05T00:26:00+00:00"
           },
-          "designcraft-0.17.0-linux-x86_64.rpm": {
-            "build_id": 11248238,
+          "designcraft-0.17.1-linux-x86_64.rpm": {
+            "build_id": 11261535,
             "chroots": [
               "fedora-43-x86_64",
               "fedora-44-x86_64",
               "fedora-rawhide-x86_64"
             ],
-            "published_at": "2026-11-03T07:00:15+00:00"
+            "published_at": "2026-11-05T00:26:09+00:00"
           }
         }
       }
